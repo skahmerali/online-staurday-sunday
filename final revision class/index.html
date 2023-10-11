@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>Submitted data</h1>
+        <input type="text" id="inputName" placeholder="User Name">
+        <input type="email" id="inputEmail" placeholder="User Email">
+        <input type="text" id="inputAddress" placeholder="User Address">
+        <button onClick="postData()">postData</button>
+        <h1>Recieving Data</h1>
+        <div id="receive">
+            
+        </div>
+        <div id="receive-buuton"></div>
+    </div>
+
+    <script>
+        var arrays = [] ;
+        function postData (){
+            var inputName = document.getElementById("inputName").value;
+            var inputEmail = document.getElementById("inputEmail").value;
+            var inputAddress = document.getElementById("inputAddress").value
+            arrays.push(inputName , inputEmail, inputAddress);
+            console.log(arrays)
+            var htmlPart = `
+            <input id="getInputName" clsas="" value="${inputName}">
+            <input id="getInputEmail" clsas="" value="${inputEmail}">
+            <input id="getInputAddress" clsas="" value="${inputAddress}">
+            <button href="javascript:void(0)" onClick="editArr('${inputName}', '${inputEmail}', '${inputAddress}')"> Edit </button>
+            `
+
+            document.getElementById("receive").innerHTML = htmlPart;
+        }
+
+        function editArr (){
+            // console.log(inputName);
+            // console.log(document.getElementById("getInputName").value)
+            var getInputName = document.getElementById("getInputName").value 
+            var getInputEmail = document.getElementById("getInputEmail").value 
+            var getInputAddress = document.getElementById("getInputAddress").value 
+            var getHtmlPart = `
+            <button href="javascript:void(0)" onClick="saveData('${getInputName}', '${getInputEmail}', '${getInputAddress}')"> Save </button>
+            `
+            document.getElementById("receive-buuton").innerHTML = getHtmlPart;
+    
+        }
+        function saveData (getInputName, getInputEmail, getInputAddress){
+            console.log(getInputAddress);
+            document.getElementById("inputAddress").value = getInputAddress;
+            var indexGetInputAddress = arrays.indexOf(getInputEmail);
+            console.log(indexGetInputAddress);
+            // arrays.splice(indexGetInputAddress, 1, getInputAddress);
+            // arrays.replace(inputAddress,getInputAddress);
+            if( indexGetInputAddress !== arrays.length - 1){
+            arrays[indexGetInputAddress] = getInputEmail;
+            console.log("hello")
+        // var newArr = arrays.slice(0 , getInputAddress)
+        }
+            console.log(arrays)
+        }
+    </script>
+</body>
+</html>

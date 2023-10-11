@@ -1,0 +1,4 @@
+ASSIGNEMENT 
+first take two inputs from user 
+store in different varriables 
+first show me a result with additon then subtraction then multiplication and the last division

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // function abc (val){
+        //     var inputData = val;
+        //     console.log(inputData);
+        // }
+        // abc("car");
+        // abc("Boil the water");
+        // abc("Add the cold water to the kettle");
+        var plan1 = {
+            name: "Basic",
+            price: 3.99,
+            space: 100,
+            transfer: 1000,
+            pages: 10
+        };
+        function Plan(name, price, space, transfer, pages) {
+            this.name = name;
+            this.price = price;
+            this.space = space;
+            this.transfer = transfer;
+            this.pages = pages;
+        }
+        var plan1 = new Plan("Basic", 3.99, 100, 1000, 10);
+        var plan2 = new Plan("Premium", 5.99, 500, 5000, 50);
+        var plan3 = new Plan("Ultimate", 9.99, 2000, 20000, 500);
+
+
+        console.log(plan1);
+        console.log(plan2);
+        console.log(plan3);
+
+
+        function Add(firstVal, secondVal){
+            this.firstVal = firstVal
+            this.secondVal= secondVal
+var res = firstVal +v
+        }
+        var addition = new Add(3,8);
+        console.log(addition);
+    </script>
+</body>
+
+</html>
