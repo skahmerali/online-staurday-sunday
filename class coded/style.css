@@ -1,0 +1,30 @@
+.main{
+    width: 95%;
+    height: 1000px;
+    background-color: beige;
+}
+.heading{
+    width: 31.3%;
+    background-color: aqua;
+    margin: 1%;
+    height:100px;
+}
+.heading-1st{
+    width: 99.9%;
+    background-color: yellow;
+    height:50px;
+}
+.heading-2nd{
+    width:48% ;
+    background-color: green;
+    display: inline-block;
+    height:50%;
+    float: left;
+}
+.heading-3rd{
+    width: 48%;
+    background-color:red ;
+    height: 50%;
+    display: inline-block;
+    float: right;
+}
